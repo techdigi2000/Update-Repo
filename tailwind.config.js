@@ -27,6 +27,18 @@ module.exports = {
       boxShadow: {
         testShadow: "0px 0px 54px -13px rgba(0,0,0,0.7)",
       },
+      animation: {
+        shake: 'shake 1s ease-in-out infinite',
+      },
+      keyframes: {
+        shake: {
+          '0%': { transform: 'translateX(-10px)' },
+          '25%': { transform: 'translateX(10px)' },
+          '50%': { transform: 'translateX(-10px)' },
+          '75%': { transform: 'translateX(10px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
   },
   plugins: [require("tailwind-scrollbar")],

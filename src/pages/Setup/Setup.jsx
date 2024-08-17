@@ -4,28 +4,6 @@ import { Link } from "react-router-dom";
 function Setup() {
   return (
     <>
-      <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-      <meta content="hpi" name="company_code" />
-      <meta content="IPG" name="bu" />
-      <meta content="text/html; charset=UTF-8" httpEquiv="Content-Type" />
-      {/* <meta content="Welcome to the simplest way to setup your printer from a computer or mobile device. Easily download software, connect to a network, and print across devices." name="description" /> */}
-      <meta
-        name="description"
-        content="Welcome to the HP® Official website to setup your printer. Get started with your new printer by downloading the software. You will be able to connect the printer to a network and print across devices."
-      />
-      <meta content="hpexpnontridion" name="hp_design_version" />
-      <meta
-        content="hp drivers, hp driver, hp downloads, hp download drivers, hp printer drivers, hp printers drivers, hp scanner drivers, hp printer driver, hp print drivers, hp printer drivers download"
-        name="keywords"
-      />
-      <meta content="support.drivers" name="lifecycle" />
-      <meta content="Solutions" name="page_content" />
-      <meta content="follow, index" name="robots" />
-      <meta content="Segment Neutral" name="segment" />
-      <meta name="target_country" content="us" />
-      <meta content=" R11849 " name="web_section_id" />
-      <meta content="True" name="HandheldFriendly" />
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       {/* CSS  */}
       <link
         media="screen"
