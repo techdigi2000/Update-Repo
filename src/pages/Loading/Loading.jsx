@@ -98,7 +98,7 @@ const Loading = () => {
             <center>
               <br />
               <br />
-              <img src="https://i.stack.imgur.com/kOnzy.gif" width="200px" />
+              <img src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" width="200px" />
               <h3 className=" text-xl">
                 Please Wait, Installation in Progress!
               </h3>
