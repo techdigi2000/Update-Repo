@@ -13,13 +13,12 @@ const Sale = () => {
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2 pr-4">
           <p className="text-xl lg:text-3xl font-semibold mb-4">
-            Conduct Diagnosis and Resolve Issues
+            Quick Fixes for Common Tech Problems
           </p>
           <p className="text-gray-700 mb-4 text-lg">
-            Find easy-to-use resources for common computer and printer problems.
-            Click on the tabs to choose between computer and printer topics,
-            then select a problem to see helpful solutions. For setting up your
-            printer, click here.
+            Discover tips, tools, and resources to enhance your computer and
+            printer experience. Learn how to troubleshoot common issues and
+            maximize productivity.
           </p>
           <Link
             to="/Setup"
@@ -70,18 +69,18 @@ const Sale = () => {
         </div>
         <div className="lg:w-1/2 pr-4">
           <p className="text-xl lg:text-3xl font-semibold mb-4">
-            How to setup your printer
+            Quick Start Guide for Your Printer
           </p>
           <p className="text-gray-700 mb-4 text-lg">
-            To access a comprehensive, step-by-step guide on setting up,
-            configuring, and registering your printer, simply click on “Printer
-            Setup.”
+            Discover essential tips and tricks for setting up your printer
+            effortlessly. Access our comprehensive guide for a smooth setup
+            process.
           </p>
           <Link
             to="/Setup"
             className="text-white bg-black py-2 px-4 rounded-full inline-block"
           >
-            Click Here for Printer Setup
+            Start Setup
           </Link>
         </div>
       </div>
