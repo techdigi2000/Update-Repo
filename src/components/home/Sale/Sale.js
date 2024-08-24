@@ -13,7 +13,7 @@ const Sale = () => {
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2 pr-4">
           <p className="text-xl lg:text-3xl font-semibold mb-4">
-            Quick Fixes for Common Tech Problems
+            Printer Scanner Setup
           </p>
           <p className="text-gray-700 mb-4 text-lg">
             Discover tips, tools, and resources to enhance your computer and
