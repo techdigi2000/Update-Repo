@@ -44,7 +44,7 @@ const Header = () => {
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
               }}
             >
-              <Link to="/">Printer Problems? We Have Solutions</Link>
+              
             </span>
           </div>
 
