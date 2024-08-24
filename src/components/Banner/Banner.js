@@ -30,8 +30,6 @@ function Banner() {
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Black outline effect
             }}
           >
-            &#9658; Set Up Your HP Printer <br />
-            &#9658; Easy Remote Printer Setup <br />
             &#9658; 123 Setup And Printer Setup <br />
             &#9658; Quick and Easy Printer Setup <br />
             &#9658; Step-by-Step Printer Setup <br />
