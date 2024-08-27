@@ -23,18 +23,26 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Shop from "./pages/Shop/Shop";
 import Setup from "./pages/Setup/Setup";
 import Downloading from "./pages/Downloading/Downloading";
+import CanonGuide from "./pages/Downloading/canon-setup-guide";
 
 import Loading from "./pages/Loading/Loading";
 import Error from "./pages/Error/Error";
 import Privacypolicy from "./pages/privacy/Privacypolicy";
 import Terms from "./pages/Terms/Terms";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import EpsonGuide from "./pages/Downloading/epson-setup-guide";
+import BrotherGuide from "./pages/Downloading/brother-setup-guide";
+import CanonLoading from "./pages/Loading/Canon-Loading";
+import EpsonLoading from "./pages/Loading/Epson-Loading";
+import BrotherLoading from "./pages/Loading/Brother-Loading";
+import CanonError from "./pages/Error/Error-canon";
+import EpsonError from "./pages/Error/Error-epson";
+import BrotherError from "./pages/Error/Error-brother";
 
 const Layout = () => {
   return (
     <div>
       <Header />
-      {/* <HeaderBottom /> */}
       <SpecialCase />
       <ScrollRestoration />
       <Outlet />
@@ -64,11 +72,21 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
-      <Route path="/setup" element={<Setup />}></Route>
+      <Route path="/hp-setup-guide" element={<Setup />}></Route>
       <Route path="/setup/downloading" element={<Downloading />}></Route>
+      <Route path="/canon-setup-guide" element={<CanonGuide />}></Route>
+      <Route path="/epson-setup-guide" element={<EpsonGuide />}></Route>
+      <Route path="/brother-setup-guide" element={<BrotherGuide />}></Route>
 
       <Route path="/setup/loading" element={<Loading />}></Route>
+      <Route path="/canon/loading" element={<CanonLoading />}></Route>
+      <Route path="/epson/loading" element={<EpsonLoading />}></Route>
+      <Route path="/brother/loading" element={<BrotherLoading />}></Route>
+
       <Route path="/setup/error" element={<Error />}></Route>
+      <Route path="/canon/error" element={<CanonError />}></Route>
+      <Route path="/epson/error" element={<EpsonError />}></Route>
+      <Route path="/brother/error" element={<BrotherError />}></Route>
       <Route path="/setup/officejet" element={<Downloading />}></Route>
       <Route path="/setup/deskjet" element={<Downloading />}></Route>
       <Route path="/setup/laserjet" element={<Downloading />}></Route>
