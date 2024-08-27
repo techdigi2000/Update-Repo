@@ -93,7 +93,7 @@ function Banner() {
             <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
               24/7 Customer Care{" "}
               <a
-                href="https://tawk.to/chat/66a8eee332dca6db2cb7758a/1i41uaahk" // Replace with your URL
+                href="https://tawk.to/chat/66cdc9a850c10f7a00a0e87e/1i69tnf1v" // Replace with your URL
                 className="font-bold py-2 px-3 text-sm md:text-base bg-black rounded-full text-white hover:bg-gray-800"
               >
                 Chat Now
