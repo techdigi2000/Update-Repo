@@ -13,7 +13,7 @@ const Sale = () => {
       <div className="flex flex-col lg:flex-row p-4">
         <div className="lg:w-1/2 pr-4">
           <p className="text-xl lg:text-3xl font-semibold mb-4">
-            Printer Scanner Setup
+            Why Printer Scanner Setup
           </p>
           <p className="text-gray-700 mb-4 text-lg">
             Discover tips, tools, and resources to enhance your computer and
@@ -21,7 +21,7 @@ const Sale = () => {
             maximize productivity.
           </p>
           <Link
-            to="/Setup"
+            to="/hp-setup-guide"
             className="text-white bg-black py-2 px-4 rounded-full inline-block"
           >
             Setup Now
@@ -77,7 +77,7 @@ const Sale = () => {
             process.
           </p>
           <Link
-            to="/Setup"
+            to="/hp-setup-guide"
             className="text-white bg-black py-2 px-4 rounded-full inline-block"
           >
             Start Setup
