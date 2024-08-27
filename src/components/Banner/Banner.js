@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { printer, bgmain } from "../../assets/images";
+import img1 from "../../assets/pngwing.com.png";
+import img2 from "../../assets/Imagecn.jpg";
+import img3 from "../../assets/imagees.png";
+import img4 from "../../assets/imagebr.jpg";
 
 function Banner() {
   return (
@@ -35,14 +39,52 @@ function Banner() {
             &#9658; Step-by-Step Printer Setup <br />
           </p>
 
-          <p className="pt-2 mb-7">
+          <div className="flex flex-wrap justify-center items-center space-x-4 md:space-x-0">
             <Link
-              to="/setup"
-              className="font-bold py-4 px-6 mb-4 text-base md:text-lg bg-black rounded-lg text-white hover:bg-slate-700 animate-shake"
+              to="/hp-setup-guide"
+              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
             >
-              SETUP PRINTER NOW
+              <img
+                src={img1}
+                alt="Setup"
+                className="w-full h-auto object-contain md:w-auto"
+              />
             </Link>
-          </p>
+
+            <Link
+              to="/canon-setup-guide"
+              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
+            >
+              <img
+                src={img2}
+                alt="Setup"
+                className="w-full h-auto object-contain md:w-auto"
+              />
+            </Link>
+
+            <Link
+              to="/epson-setup-guide"
+              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
+            >
+              <img
+                src={img3}
+                alt="Setup"
+                className="w-full h-auto object-contain md:w-auto"
+              />
+            </Link>
+
+            <Link
+              to="/brother-setup-guide"
+              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
+            >
+              <img
+                src={img4}
+                alt="Setup Printer Now"
+                className="w-full h-auto object-contain md:w-auto"
+              />
+            </Link>
+          </div>
+
           <p className="pt-2 mb-4">
             <span className="text-3xl lg:text-4xl font-bold text-white">
               Printer Problems? We Can Help
