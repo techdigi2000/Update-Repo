@@ -39,51 +39,14 @@ function Banner() {
             &#9658; Step-by-Step Printer Setup <br />
           </p>
 
-          <div className="flex flex-wrap justify-center items-center space-x-4 md:space-x-0">
-            <Link
-              to="/hp-setup-guide"
-              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
-            >
-              <img
-                src={img1}
-                alt="Setup"
-                className="w-full h-auto object-contain md:w-auto"
-              />
-            </Link>
+       <Link
+            to="/hp-setup-guide"
+            className="bg-black mb-4 w-full md:w-1/4 lg:w-1/5 rounded-lg text-white font-semibold py-3 px-6 text-center transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-800 shadow-lg"
+            style={{ fontFamily: "'Roboto', sans-serif", fontSize: "1rem" }}
+          >
+            Click Here To Setup Your Printer
+          </Link>
 
-            <Link
-              to="/canon-setup-guide"
-              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
-            >
-              <img
-                src={img2}
-                alt="Setup"
-                className="w-full h-auto object-contain md:w-auto"
-              />
-            </Link>
-
-            <Link
-              to="/epson-setup-guide"
-              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
-            >
-              <img
-                src={img3}
-                alt="Setup"
-                className="w-full h-auto object-contain md:w-auto"
-              />
-            </Link>
-
-            <Link
-              to="/brother-setup-guide"
-              className=" mb-4 md:w-1/4 w-full rounded-lg text-white animate-smooth-shake flex justify-center"
-            >
-              <img
-                src={img4}
-                alt="Setup Printer Now"
-                className="w-full h-auto object-contain md:w-auto"
-              />
-            </Link>
-          </div>
 
           <p className="pt-2 mb-4">
             <span className="text-3xl lg:text-4xl font-bold text-white">
