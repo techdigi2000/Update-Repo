@@ -62,6 +62,11 @@ const Loading = () => {
             href="https://123.hp.com/resources/assets/css/page/swls-delay.css"
             type="text/css"
           />
+          <!-- Event snippet for Loading Page (1) conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-16681626072/e43mCOX3_M0ZENjTtZI-'});
+</script>
+
         </head>
         <body>
           <div className="header-123" id="header-123">
