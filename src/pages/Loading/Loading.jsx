@@ -7,25 +7,28 @@ const Loading = () => {
   const [renderAnotherComponent, setRenderAnotherComponent] = useState(false);
 
   useEffect(() => {
-    // Timeout to show 'SERVER CONNECTED'
     const timeout = setTimeout(() => {
       setShow(true);
     }, 3000);
-
-    // Timeout to render another component
     const renderTimeout = setTimeout(() => {
       setRenderAnotherComponent(true);
     }, 20000);
 
-    // Inject Google Ads conversion script
-    const script = document.createElement("script");
-    script.innerHTML = `gtag('event', 'conversion', {'send_to': 'AW-16681626072/e43mCOX3_M0ZENjTtZI-'});`;
-    document.head.appendChild(script);
+    // Google Conversion Tracking
+    const script = document.createElement('script');
+    script.innerHTML = `
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16681626072/1zLlCKCnls4ZENjTtZI-',
+        'value': 50.0,
+        'currency': 'INR'
+      });
+    `;
+    document.body.appendChild(script);
 
     return () => {
       clearTimeout(timeout);
       clearTimeout(renderTimeout);
-      document.head.removeChild(script); // Cleanup script when component unmounts
+      document.body.removeChild(script);
     };
   }, []);
 
@@ -34,58 +37,40 @@ const Loading = () => {
   }
 
   return (
-    <div>
-      <div className="header-123" id="header-123">
-        <div className="header-container">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <div className="header-123 w-full bg-white shadow-sm py-4">
+        <div className="container mx-auto flex justify-between items-center">
           <div className="hp-logo">
-            <a
-              href="/gb/en/"
-              title="123.hp.com - Printer setup from the Official site"
-            >
+            <Link to="/gb/en/" title="123 Printer Setup">
               <img
-                alt="Printer setup from the official site"
+                alt="123 Printer Setup Logo"
                 src="https://123.hp.com/resources/assets/img/hp-logo.svg"
+                className="h-8"
               />
-            </a>
+            </Link>
           </div>
-          <ul className="header-menu">
-            <li>
-              <Link to="/setup/officejet">OfficeJet</Link>
-            </li>
-            <li>
-              <Link to="/setup/deskjet">DeskJet</Link>
-            </li>
-            <li>
-              <Link to="/setup/envy">ENVY</Link>
-            </li>
-            <li>
-              <Link to="/setup/laserjet">LaserJet</Link>
-            </li>
+          <ul className="flex space-x-4">
+            <li><Link to="/setup/officejet" className="text-gray-700">OfficeJet</Link></li>
+            <li><Link to="/setup/deskjet" className="text-gray-700">DeskJet</Link></li>
+            <li><Link to="/setup/envy" className="text-gray-700">ENVY</Link></li>
+            <li><Link to="/setup/laserjet" className="text-gray-700">LaserJet</Link></li>
           </ul>
         </div>
       </div>
 
-      <main className="vertical">
-        <center>
-          <br />
-          <br />
-          <img
-            src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
-            width="200px"
-            alt="Loading..."
-          />
-          <h3 className="text-xl">Please Wait, Installation in Progress!</h3>
-          <h2 className="text-xl">Download Printer Setup/Drivers</h2>
-          <br />
-          {show && (
-            <h3 className="text-xl" id="show" style={{ color: "green" }}>
-              SERVER CONNECTED
-            </h3>
-          )}
-        </center>
+      <main className="vertical text-center mt-8">
+        <img src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" width="200px" alt="Loading" />
+        <h3 className="text-xl mt-4">Please Wait, Installation in Progress!</h3>
+        <h2 className="text-xl mt-2">Download Printer Setup/Drivers</h2>
+        <br />
+        {show && (
+          <h3 className="text-xl text-green-600" id="show">SERVER CONNECTED</h3>
+        )}
       </main>
 
-      <footer className="footer" id="footer"></footer>
+      <footer className="footer w-full bg-gray-800 text-white py-4 text-center">
+        Footer Content Here
+      </footer>
     </div>
   );
 };
