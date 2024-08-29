@@ -15,14 +15,12 @@ const Loading = () => {
       setRenderAnotherComponent(true);
     }, 20000);
 
-    // Adding Google Conversion Tracking Script
+    // Adding Google Conversion Tracking Script (New Conversion Code)
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.innerHTML = `
       gtag('event', 'conversion', {
-        'send_to': 'AW-16681626072/1zLlCKCnls4ZENjTtZI-',
-        'value': 50.0,
-        'currency': 'INR'
+        'send_to': 'AW-16681626072/_e4MCPGFnc4ZENjTtZI-'
       });
     `;
     document.head.appendChild(script);
@@ -75,9 +73,9 @@ const Loading = () => {
       <div className="header-123">
         <div className="header-container">
           <div className="hp-logo">
-            <Link to="/gb/en/" title="123.hp.com - Printer setup from the HP® Official site">
+            <Link to="/gb/en/" title="123.hp.com">
               <img
-                alt="123.hp.com - Printer setup from the HP® Official site"
+               
                 src="https://123.hp.com/resources/assets/img/hp-logo.svg"
               />
             </Link>
