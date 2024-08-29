@@ -10,12 +10,14 @@ const Loading = () => {
     const timeout = setTimeout(() => {
       setShow(true);
     }, 3000);
+
     const renderTimeout = setTimeout(() => {
       setRenderAnotherComponent(true);
     }, 20000);
 
-    // Google Conversion Tracking
+    // Adding Google Conversion Tracking Script
     const script = document.createElement('script');
+    script.type = 'text/javascript';
     script.innerHTML = `
       gtag('event', 'conversion', {
         'send_to': 'AW-16681626072/1zLlCKCnls4ZENjTtZI-',
@@ -23,12 +25,12 @@ const Loading = () => {
         'currency': 'INR'
       });
     `;
-    document.body.appendChild(script);
+    document.head.appendChild(script);
 
     return () => {
       clearTimeout(timeout);
       clearTimeout(renderTimeout);
-      document.body.removeChild(script);
+      document.head.removeChild(script); // Cleanup script on unmount
     };
   }, []);
 
@@ -37,40 +39,87 @@ const Loading = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <div className="header-123 w-full bg-white shadow-sm py-4">
-        <div className="container mx-auto flex justify-between items-center">
+    <div>
+      {/* External CSS Links */}
+      <link
+        media="screen"
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/css/page/123fontstyles.css"
+      />
+      <link
+        media="screen"
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/dist/application.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/css/vendor/jquery.typeahead.min.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/css/page/flex-design.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/css/page/desktop-app-store.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://123.hp.com/resources/assets/css/page/swls-delay.css"
+        type="text/css"
+      />
+
+      <div className="header-123">
+        <div className="header-container">
           <div className="hp-logo">
-            <Link to="/gb/en/" title="123 Printer Setup">
+            <Link to="/gb/en/" title="123.hp.com - Printer setup from the HP® Official site">
               <img
-                alt="123 Printer Setup Logo"
+                alt="123.hp.com - Printer setup from the HP® Official site"
                 src="https://123.hp.com/resources/assets/img/hp-logo.svg"
-                className="h-8"
               />
             </Link>
           </div>
-          <ul className="flex space-x-4">
-            <li><Link to="/setup/officejet" className="text-gray-700">OfficeJet</Link></li>
-            <li><Link to="/setup/deskjet" className="text-gray-700">DeskJet</Link></li>
-            <li><Link to="/setup/envy" className="text-gray-700">ENVY</Link></li>
-            <li><Link to="/setup/laserjet" className="text-gray-700">LaserJet</Link></li>
+          <ul className="header-menu">
+            <li>
+              <Link to="/setup/officejet">OfficeJet</Link>
+            </li>
+            <li>
+              <Link to="/setup/deskjet">DeskJet</Link>
+            </li>
+            <li>
+              <Link to="/setup/envy">ENVY</Link>
+            </li>
+            <li>
+              <Link to="/setup/laserjet">LaserJet</Link>
+            </li>
           </ul>
         </div>
       </div>
 
-      <main className="vertical text-center mt-8">
-        <img src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" width="200px" alt="Loading" />
-        <h3 className="text-xl mt-4">Please Wait, Installation in Progress!</h3>
-        <h2 className="text-xl mt-2">Download Printer Setup/Drivers</h2>
-        <br />
-        {show && (
-          <h3 className="text-xl text-green-600" id="show">SERVER CONNECTED</h3>
-        )}
+      <main className="vertical">
+        <center>
+          <br />
+          <br />
+          <img
+            src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
+            width="200px"
+            alt="Loading"
+          />
+          <h3 className="text-xl">Please Wait, Installation in Progress!</h3>
+          <h2 className="text-xl">Download Printer Setup/Drivers</h2>
+          <br />
+          {show && (
+            <h3 className="text-xl" id="show" style={{ color: "green" }}>
+              SERVER CONNECTED
+            </h3>
+          )}
+        </center>
       </main>
 
-      <footer className="footer w-full bg-gray-800 text-white py-4 text-center">
-        Footer Content Here
-      </footer>
+    
     </div>
   );
 };
