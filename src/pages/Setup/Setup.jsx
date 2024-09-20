@@ -2,9 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Setup() {
+  React.useEffect(() => {
+    // Preload important images
+    const imagesToPreload = [
+      "https://123.hp.com/resources/assets/img/hp-logo.svg",
+      "https://123.hp.com/resources/assets/img/defaultPrinterSetup.png",
+      "https://123.hp.com/resources/assets/img/person_assist.svg",
+    ];
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <>
-      {/* CSS  */}
+      {/* Keep all your existing CSS links */}
       <link
         media="screen"
         rel="stylesheet"
@@ -20,9 +33,6 @@ function Setup() {
         href="https://123.hp.com/resources/assets/css/vendor/jquery.typeahead.min.css"
         type="text/css"
       />
-      {/*  JavaScript */}
-      {/*  This script has very poor performance and downloads over 20 dependencies from the footer script */}
-      <title>123.hp.com - Printer setup from the HP® Official site</title>
       <link
         rel="stylesheet"
         href="https://123.hp.com/resources/assets/css/page/flex-design.css"
@@ -43,8 +53,6 @@ function Setup() {
         href="https://123.hp.com/resources/assets/css/vendor/owlCarousel/owl.theme.default.css"
         type="text/css"
       />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="hp_inav_version" content="ihfcaas.5.r" />
       <link
         rel="stylesheet"
         href="https://www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.e416b85cad0cf264bdbe92bc18c4af0a.css"
@@ -56,19 +64,21 @@ function Setup() {
         href="https://www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.e416b85cad0cf264bdbe92bc18c4af0a.css"
         type="text/css"
         media="screen, print"
-      />{" "}
-      <meta name="hp_inav_version" content="ihfcaas.5.r" />{" "}
-      {/* Data Timestamp head-script 11-04-2024 01:13:07 */}
+      />
+
+      <title>123.hp.com - Printer setup from the HP® Official site</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="hp_inav_version" content="ihfcaas.5.r" />
+
+      {/* Rest of your component JSX */}
       <div className="header-123" id="header-123">
         <div className="header-container">
           <div className="hp-logo">
-            <Link
-              to="/setup"
-              title="123.hp.com - Printer setup from the HP® Official site"
-            >
+            <Link to="/">
               <img
-                alt="123.hp.com - Printer setup from the HP® Official site"
                 src="https://123.hp.com/resources/assets/img/hp-logo.svg"
+                width="50"
+                height="50"
               />
             </Link>
           </div>
@@ -88,6 +98,8 @@ function Setup() {
           </ul>
         </div>
       </div>
+
+      {/* Hidden inputs */}
       <div>
         <input id="deviceId" type="hidden" defaultValue="" />
         <input id="languageDirection" defaultValue="ltr" type="hidden" />
@@ -103,8 +115,11 @@ function Setup() {
           type="hidden"
         />
       </div>
+
       <div id="one23-overlay" />
+
       <main className="vertical">
+        {/* Main content */}
         <div className="standard-bg horizontal centered top-content shrink-off">
           <div className="main-content vertical has-side-content">
             <div className="page-header vertical centered shrink-off">
@@ -131,7 +146,7 @@ function Setup() {
                           spellCheck="false"
                           title="Please fill out this field."
                           type="search"
-                          placeholder="Enter your product name here. Example: “OfficeJet 9010”"
+                          placeholder="Enter your product name here. Example: OfficeJet 9010"
                         />
                       </span>
                     </div>
@@ -143,7 +158,7 @@ function Setup() {
                   <button className="btn" disabled="" id="btn-begin">
                     Next
                   </button>
-                </Link>{" "}
+                </Link>
               </div>
             </div>
             <div className="whereis-printer-model">
@@ -153,6 +168,8 @@ function Setup() {
             </div>
           </div>
         </div>
+
+        {/* Bottom content */}
         <div className="horizontal centered">
           <div className="main-content vertical bottom">
             <div className="vertical">
@@ -162,6 +179,8 @@ function Setup() {
                   className="welcome-selected-printer"
                   id="printers-image"
                   src="https://123.hp.com/resources/assets/img/defaultPrinterSetup.png"
+                  width="300"
+                  height="200"
                 />
               </div>
               <div className="vertical main-text bottom-text">
@@ -173,7 +192,12 @@ function Setup() {
                 <div className="support-item">
                   <div className="support-header horizontal">
                     <div className="support-header-icon">
-                      <img src="https://123.hp.com/resources/assets/img/person_assist.svg" />
+                      <img
+                        src="https://123.hp.com/resources/assets/img/person_assist.svg"
+                        alt="Support icon"
+                        width="24"
+                        height="24"
+                      />
                     </div>
                     <div className="support-header-note main-text" id="copy2">
                       Need additional help with setup? Visit{" "}
