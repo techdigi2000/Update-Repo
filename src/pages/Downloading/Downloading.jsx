@@ -2,14 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 const Downloading = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
   const history = useNavigate();
   const [popupVisible, setPopupVisible] = useState(false);
 
@@ -158,11 +150,6 @@ const Downloading = () => {
         </style>
       </head>
       <body>
-        {isLoading && (
-          <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-16 w-16"></div>
-          </div>
-        )}
         <div className="popup" id="popup">
           <div className="popup-inner">
             <h2>Enter your information</h2>
@@ -217,14 +204,8 @@ const Downloading = () => {
         <div className="header-123" id="header-123">
           <div className="header-container">
             <div className="hp-logo">
-              <Link
-                to="/setup"
-                title="123.hp.com - Printer setup from the HP® Official site"
-              >
-                <img
-                  alt="123.hp.com - Printer setup from the HP® Official site"
-                  src="https://123.hp.com/resources/assets/img/hp-logo.svg"
-                />
+              <Link to="/">
+                <img src="https://123.hp.com/resources/assets/img/hp-logo.svg" />
               </Link>
             </div>
             <ul className="header-menu">
